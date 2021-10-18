@@ -1,4 +1,3 @@
-from flask_debugtoolbar import DebugToolbarExtension
 from flask import Flask, render_template, request, redirect, flash, session
 from boggle import Boggle
 
@@ -7,8 +6,6 @@ BOARD = "board"
 app = Flask(__name__)
 app.debug = True
 app.config['SECRET_KEY'] = "secret"
-
-debug = DebugToolbarExtension(app)
 
 boggleBoard = boggle_game.make_board()
 
